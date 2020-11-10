@@ -1,0 +1,15 @@
+name: Checkmarx SAST Scan
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Checkmarx Action
+      uses: checkmarx-ts/checkmarx-github-action@<version>
+      with:
+        cxServer: https://checkmarx.app.medcity.net/
+        cxUsername: NMO6220
+        cxPassword: ${{ secrets.CX_PASSWORD }}
+        cxTeam: CxServer\Sx\Cx\IPS\MobileHeartbeat
