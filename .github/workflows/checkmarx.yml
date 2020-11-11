@@ -9,7 +9,8 @@ jobs:
     - name: Checkmarx Action
       uses: checkmarx-ts/checkmarx-github-action@v1.0.3
       with:
-        cxServer: https://checkmarx.app.medcity.net/
+        cxServer: https://checkmarx.app.medcity.net
+        cxProject: Server Checkmarx CI - Server
         cxUsername: NMO6220
         cxPassword: ${{ secrets.CX_PASSWORD }}
         cxTeam: CxServer\Sx\Cx\IPS\MobileHeartbeat
